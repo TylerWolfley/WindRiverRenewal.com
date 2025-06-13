@@ -68,12 +68,16 @@ p { font-size: .875rem; color: #e6e6e6; }
 
 /* Hero */
 .hero {
-    min-height: 50vh; /* Shorter */
+    min-height: 50vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
+    background-image: url('images/WRR1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -124,6 +128,15 @@ p { font-size: .875rem; color: #e6e6e6; }
     margin: 0 auto;
 }
 
+.about-img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 1rem auto;
+    display: block;
+}
+
 /* Contact Teaser (Home) */
 .contact-teaser {
     padding: 3rem 2rem;
@@ -172,7 +185,11 @@ p { font-size: .875rem; color: #e6e6e6; }
 }
 
 .quote-form textarea { min-height: 6rem; resize: vertical; }
-.quote-form select { appearance: none; background: rgba(255,255,255,.03) url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right .5rem center; }
+
+.quote-form select {
+    appearance: none;
+    background: rgba(255,255,255,.03) url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right .5rem center;
+}
 
 /* Contact Page */
 .contact {
@@ -243,7 +260,15 @@ footer a:hover { color: #f0f0f0; }
 /* Responsive */
 @media (max-width: 768px) {
     .hamburger { display: block; }
-    .nav-menu { max-height: 0; overflow: hidden; width: 100%; position: absolute; top: 3rem; left: 0; background: rgba(0,0,0,.9); }
+    .nav-menu {
+        max-height: 0;
+        overflow: hidden;
+        width: 100%;
+        position: absolute;
+        top: 3rem;
+        left: 0;
+        background: rgba(0,0,0,.9);
+    }
     .nav-menu.active { max-height: 12rem; }
     .nav-links { flex-direction: column; padding: 1rem; gap: 1rem; }
     .navbar { padding: .5rem 1.5rem; }
@@ -266,7 +291,10 @@ footer a:hover { color: #f0f0f0; }
     h3 { font-size: 1rem; }
     p { font-size: .75rem; }
     .navbar { padding: .5rem 1rem; }
-    .hero-btn, .contact-btn, .contact-form button, .quote-form button { padding: .375rem 1rem; font-size: .75rem; }
+    .hero-btn, .contact-btn, .contact-form button, .quote-form button {
+        padding: .375rem 1rem;
+        font-size: .75rem;
+    }
     .service-card { padding: .75rem; }
     .quote-form textarea, .contact-form textarea { min-height: 4rem; }
 }
