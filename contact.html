@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Wind River Renewal for services in Fremont County, WY.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Wind River Renewal for services in Fremont County, WY." />
     <title>Contact Us - Wind River Renewal</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
     <header class="navbar">
@@ -29,17 +29,17 @@
             <p>Email: <a href="mailto:info@windriverrenewal.com">info@windriverrenewal.com</a></p>
             <p>Address: 822 Forest Drive, Riverton, WY 82501</p>
         </div>
-        <form class="contact-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
+        <form class="contact-form" action="https://formspree.io/f/manjoggv" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
             <textarea name="message" placeholder="Your Message" required></textarea>
+            <input type="hidden" name="_redirect" value="https://windriverrenewal.com/thank-you.html" />
             <button type="submit">Send Message</button>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 Wind River Renewal | Riverton, WY</p>
-        <p><a href="[the_blank">[Your Facebook URL]" target="_blank">Follow us on Facebook</a></p>
     </footer>
 
     <script src="script.js"></script>
