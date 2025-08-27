@@ -1,0 +1,276 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0a0a0a;
+    background-image: 
+        repeating-linear-gradient(45deg, rgba(255,255,255,.02) 0, rgba(255,255,255,.02) 2px, transparent 2px, transparent 10px),
+        repeating-linear-gradient(-45deg, rgba(255,255,255,.02) 0, rgba(255,255,255,.02) 2px, transparent 2px, transparent 10px);
+    background-size: 14px 14px;
+    color: #fff;
+    font: 400 16px/1.4 Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem; }
+h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: .75rem; }
+p { font-size: .875rem; color: #e6e6e6; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .75rem 2rem;
+    background: rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .875rem;
+    transition: color .3s ease;
+}
+
+.nav-links a:hover { color: #f0f0f0; }
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero {
+    min-height: 50vh; /* Shorter */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero-content {
+    background: rgba(0,0,0,.7);
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    background: #fff;
+    color: #0a0a0a;
+    text-decoration: none;
+    border-radius: .25rem;
+    font-weight: 600;
+    transition: background .3s ease;
+}
+
+.hero-btn:hover { background: #e6e6e6; }
+
+/* Services */
+.services {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 1.5rem;
+}
+
+.service-card {
+    padding: 1.5rem;
+    background: rgba(255,255,255,.05);
+    border-radius: .5rem;
+}
+
+/* About */
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.about p {
+    max-width: 36rem;
+    margin: 0 auto;
+}
+
+/* Contact Teaser (Home) */
+.contact-teaser {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    background: #fff;
+    color: #0a0a0a;
+    text-decoration: none;
+    border-radius: .25rem;
+    font-weight: 600;
+    transition: background .3s ease;
+}
+
+.contact-btn:hover { background: #e6e6e6; }
+
+/* Quote Page */
+.quote {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.quote-form {
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background: rgba(255,255,255,.05);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.quote-form input,
+.quote-form textarea,
+.quote-form select {
+    padding: .75rem;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: .25rem;
+    color: #fff;
+    font-size: .875rem;
+}
+
+.quote-form textarea { min-height: 6rem; resize: vertical; }
+.quote-form select { appearance: none; background: rgba(255,255,255,.03) url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right .5rem center; }
+
+/* Contact Page */
+.contact {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 24rem;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background: rgba(255,255,255,.05);
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: .75rem;
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: .25rem;
+    color: #fff;
+    font-size: .875rem;
+}
+
+.contact-form textarea { min-height: 6rem; resize: vertical; }
+
+.contact-form button,
+.quote-form button {
+    padding: .5rem 1.5rem;
+    background: #fff;
+    color: #0a0a0a;
+    border: none;
+    border-radius: .25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .3s ease;
+}
+
+.contact-form button:hover,
+.quote-form button:hover { background: #e6e6e6; }
+
+.contact-info {
+    max-width: 24rem;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background: rgba(255,255,255,.05);
+    border-radius: .5rem;
+}
+
+.contact-info p { margin: .5rem 0; }
+.contact-info a { color: #fff; text-decoration: none; }
+.contact-info a:hover { color: #f0f0f0; }
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer p { font-size: .875rem; margin: .25rem 0; }
+footer a { color: #fff; text-decoration: none; }
+footer a:hover { color: #f0f0f0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hamburger { display: block; }
+    .nav-menu { max-height: 0; overflow: hidden; width: 100%; position: absolute; top: 3rem; left: 0; background: rgba(0,0,0,.9); }
+    .nav-menu.active { max-height: 12rem; }
+    .nav-links { flex-direction: column; padding: 1rem; gap: 1rem; }
+    .navbar { padding: .5rem 1.5rem; }
+    .logo { font-size: 1rem; }
+    .hero { min-height: 40vh; padding: 1.5rem; }
+    .hero-content { padding: 1.5rem; }
+    .hero h1 { font-size: 1.5rem; }
+    .services, .about, .contact-teaser { padding: 2rem 1.5rem; }
+    .service-grid { gap: 1rem; }
+    .service-card { padding: 1rem; }
+    .quote, .contact { padding: 3rem 1.5rem 1.5rem; }
+    .quote-form, .contact-form { padding: .75rem; }
+    .contact-info { padding: 1rem; }
+    footer { padding: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.25rem; }
+    h2 { font-size: 1.125rem; }
+    h3 { font-size: 1rem; }
+    p { font-size: .75rem; }
+    .navbar { padding: .5rem 1rem; }
+    .hero-btn, .contact-btn, .contact-form button, .quote-form button { padding: .375rem 1rem; font-size: .75rem; }
+    .service-card { padding: .75rem; }
+    .quote-form textarea, .contact-form textarea { min-height: 4rem; }
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> 2e822c9 (Initial commit - Wind River Renewal site)
